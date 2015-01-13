@@ -5,6 +5,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.time.DateTimeException;
 import java.time.DayOfWeek;
 
 import javax.persistence.AttributeConverter;
@@ -28,5 +29,10 @@ public class DayOfWeekConverterTest {
 		for (DayOfWeek dayOfWeek : DayOfWeek.values()) {
 			assertThat(converter.convertToEntityAttribute(dayOfWeek.getValue()), is(equalTo(dayOfWeek)));
 		}
+	}
+	
+	@Test(expected = DateTimeException.class)
+	public void dateTimeException() {
+		converter.convertToEntityAttribute(0);
 	}
 }

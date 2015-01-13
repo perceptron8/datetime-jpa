@@ -5,6 +5,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.time.DateTimeException;
 import java.time.Month;
 
 import javax.persistence.AttributeConverter;
@@ -28,5 +29,10 @@ public class MonthConverterTest {
 		for (Month month : Month.values()) {
 			assertThat(converter.convertToEntityAttribute(month.getValue()), is(equalTo(month)));
 		}
+	}
+	
+	@Test(expected = DateTimeException.class)
+	public void dateTimeException() {
+		converter.convertToEntityAttribute(0);
 	}
 }
