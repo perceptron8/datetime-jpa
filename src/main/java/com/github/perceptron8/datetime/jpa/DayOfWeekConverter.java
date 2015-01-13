@@ -7,7 +7,7 @@ import javax.persistence.Converter;
 
 /**
  * Converts {@link DayOfWeek} to {@link Integer} and back again.
- * Throws {@link DateTimeException} if the latter is impossible.
+ * Throws {@link DateTimeException} if the latter is not possible.
  */
 @Converter(autoApply = true)
 public class DayOfWeekConverter implements AttributeConverter<DayOfWeek, Integer> {

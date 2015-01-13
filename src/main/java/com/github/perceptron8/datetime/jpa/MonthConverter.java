@@ -7,7 +7,7 @@ import javax.persistence.Converter;
 
 /**
  * Converts {@link Month} to {@link Integer} and back again
- * Throws {@link DateTimeException} if the latter is impossible.
+ * Throws {@link DateTimeException} if the latter is not possible.
  */
 @Converter(autoApply = true)
 public class MonthConverter implements AttributeConverter<Month, Integer> {
