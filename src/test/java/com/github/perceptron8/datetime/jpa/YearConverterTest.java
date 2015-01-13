@@ -1,6 +1,5 @@
 package com.github.perceptron8.datetime.jpa;
 
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.nullValue;

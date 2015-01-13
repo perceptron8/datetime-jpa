@@ -1,6 +1,5 @@
 package com.github.perceptron8.datetime.jpa;
 
-
 import static org.junit.Assert.assertEquals;
 
 import java.sql.Timestamp;

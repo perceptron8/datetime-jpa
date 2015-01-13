@@ -1,13 +1,12 @@
 package com.github.perceptron8.datetime.jpa;
 
-import java.sql.Date;
 import java.time.DayOfWeek;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
 /**
- * Converts {@link DayOfWeek} to {@link Date} and back again.
+ * Converts {@link DayOfWeek} to {@link Integer} and back again.
  */
 @Converter(autoApply = true)
 public class DayOfWeekConverter implements AttributeConverter<DayOfWeek, Integer> {
