@@ -8,6 +8,7 @@ import javax.persistence.Converter;
 
 /**
  * Converts {@link LocalDate} to {@link Date} and back again.
+ * Throws {@link IllegalArgumentException} if the former is impossible.
  */
 @Converter(autoApply = true)
 public class LocalDateConverter implements AttributeConverter<LocalDate, Date> {

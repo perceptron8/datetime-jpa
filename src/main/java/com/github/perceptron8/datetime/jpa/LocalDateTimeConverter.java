@@ -8,6 +8,7 @@ import javax.persistence.Converter;
 
 /**
  * Converts {@link LocalDateTime} to {@link Timestamp} and back again.
+ * Throws {@link IllegalArgumentException} if the former is impossible.
  */
 @Converter(autoApply = true)
 public class LocalDateTimeConverter implements AttributeConverter<LocalDateTime, Timestamp> {
