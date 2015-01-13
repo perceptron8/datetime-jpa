@@ -13,18 +13,18 @@ import org.junit.Test;
 public class LocalTimeConverterTest {
 	private AttributeConverter<LocalTime, Time> converter = new LocalTimeConverter();
 
-	private LocalTime attribute = LocalTime.of(23, 3, 20);
-	private Time dbData = Time.valueOf(attribute);
+	private LocalTime entityAttribute = LocalTime.of(23, 59, 59);
+	private Time databaseColumn = Time.valueOf(entityAttribute);
 	
 	@Test
 	public void convertToDatabaseColumn() {
 		assertEquals(null, converter.convertToDatabaseColumn(null));
-		assertEquals(dbData, converter.convertToDatabaseColumn(attribute));
+		assertEquals(databaseColumn, converter.convertToDatabaseColumn(entityAttribute));
 	}
 
 	@Test
 	public void convertToEntityAttribute() {
 		assertEquals(null, converter.convertToEntityAttribute(null));
-		assertEquals(attribute, converter.convertToEntityAttribute(dbData));
+		assertEquals(entityAttribute, converter.convertToEntityAttribute(databaseColumn));
 	}
 }

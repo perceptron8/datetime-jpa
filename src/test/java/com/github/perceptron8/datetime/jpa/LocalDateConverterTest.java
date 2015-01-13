@@ -14,19 +14,19 @@ import org.junit.Test;
 public class LocalDateConverterTest {
 	private AttributeConverter<LocalDate, Date> converter = new LocalDateConverter();
 
-	private LocalDate attribute = LocalDate.of(1960, 1, 1);
-	private Date dbData = Date.valueOf(attribute);
+	private LocalDate entityAttribute = LocalDate.of(2000, 12, 31);
+	private Date databaseColumn = Date.valueOf(entityAttribute);
 
 	@Test
 	public void convertToDatabaseColumn() {
 		assertEquals(null, converter.convertToDatabaseColumn(null));
-		assertEquals(dbData, converter.convertToDatabaseColumn(attribute));
+		assertEquals(databaseColumn, converter.convertToDatabaseColumn(entityAttribute));
 	}
 
 	@Test
 	public void convertToEntityAttribute() {
 		assertEquals(null, converter.convertToEntityAttribute(null));
-		assertEquals(attribute, converter.convertToEntityAttribute(dbData));
+		assertEquals(entityAttribute, converter.convertToEntityAttribute(databaseColumn));
 	}
 
 	@Ignore("JI-9018213")
