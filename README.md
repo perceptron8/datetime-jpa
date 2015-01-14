@@ -1,7 +1,7 @@
 datetime-jpa
 ============
 
-JPA 2.1 attribute converters for JSR-310 (Java 8) dates and times. See [JPA_SPEC-63](https://java.net/jira/browse/JPA_SPEC-63).
+JPA 2.1 attribute converters for JSR-310 (Java 8) dates and times.
 
 Following conversions are supported.
 
@@ -17,6 +17,8 @@ Following conversions are supported.
 | Year           | INTEGER    |
 | YearMonth      | DATE       |
 | YearMonth      | LONG       |
+
+See [JPA_SPEC-63](https://java.net/jira/browse/JPA_SPEC-63).
 
 
 Credits
