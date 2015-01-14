@@ -41,10 +41,11 @@ Usage
 @Entity
 public class SampleEntity {
     …
-    private DayOfWeek dayOfWeek;
     private LocalDate localDate;
     private LocalTime localTime;
     private LocalDateTime localDateTime;
+    …
+    private DayOfWeek dayOfWeek;
     private Month month;
     private Year year;
     …
