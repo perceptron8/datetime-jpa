@@ -26,9 +26,9 @@ Usage
 ```xml
 <persistence-unit>
     …
-    <class>com.github.marschall.threeten.jpa.LocalTimeConverter</class>
-    <class>com.github.marschall.threeten.jpa.LocalDateConverter</class>
-    <class>com.github.marschall.threeten.jpa.LocalDateTimeConverter</class>
+    <class>perceptron8.datetime.jpa.LocalTimeConverter</class>
+    <class>perceptron8.datetime.jpa.LocalDateConverter</class>
+    <class>perceptron8.datetime.jpa.LocalDateTimeConverter</class>
     …
 </persistence-unit>
 ```
@@ -36,9 +36,11 @@ Usage
 ```java
 @Entity
 public class SampleEntity {
-  private LocalDate localDate;
-  private LocalTime localTime;
-  private LocalDateTime localDateTime;
+    …
+    private LocalDate localDate;
+    private LocalTime localTime;
+    private LocalDateTime localDateTime;
+    …
 }
 ```
 
