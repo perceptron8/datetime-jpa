@@ -12,8 +12,6 @@ import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
 
-import perceptron8.datetime.jpa.DayOfWeekConverter;
-
 public class DayOfWeekConverterTest {
 	private AttributeConverter<DayOfWeek, Integer> converter = new DayOfWeekConverter();
 
@@ -32,7 +30,7 @@ public class DayOfWeekConverterTest {
 			assertThat(converter.convertToEntityAttribute(dayOfWeek.getValue()), is(equalTo(dayOfWeek)));
 		}
 	}
-	
+
 	@Test(expected = DateTimeException.class)
 	public void dateTimeException() {
 		converter.convertToEntityAttribute(0);
