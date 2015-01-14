@@ -5,7 +5,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 
-import java.sql.Date;
 import java.time.Month;
 import java.time.Year;
 import java.time.YearMonth;
@@ -15,15 +14,15 @@ import javax.persistence.AttributeConverter;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public class YearMonthConverterTest {
+public class YearMonthLongConverterTest {
 	public static final int TEST_YEAR = MonthDayConverter.DEAFULT_YEAR;
-	private AttributeConverter<YearMonth, Date> converter = new YearMonthConverter();
+	private AttributeConverter<YearMonth, Long> converter = new YearMonthLongConverter();
 
 	@Test
 	public void backAndForth() {
 		for (Month month : Month.values()) {
 			YearMonth yearMonth = YearMonth.of(TEST_YEAR, month);
-			Date databaseColumn = converter.convertToDatabaseColumn(yearMonth);
+			Long databaseColumn = converter.convertToDatabaseColumn(yearMonth);
 			assertThat(converter.convertToEntityAttribute(databaseColumn), is(equalTo(yearMonth)));
 		}
 	}
