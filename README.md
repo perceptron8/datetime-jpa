@@ -34,6 +34,15 @@ Usage
     <class>perceptron8.datetime.jpa.LocalDateConverter</class>
     <class>perceptron8.datetime.jpa.LocalDateTimeConverter</class>
     …
+    <class>perceptron8.datetime.jpa.DayOfWeekConverter</class>
+    <class>perceptron8.datetime.jpa.MonthConverter</class>
+    <class>perceptron8.datetime.jpa.YearConverter</class>
+    …
+    <class>perceptron8.datetime.jpa.MonthDayConverter</class>
+    <class>perceptron8.datetime.jpa.MonthDayLongConverter</class>
+    <class>perceptron8.datetime.jpa.YearMonthConverter</class>
+    <class>perceptron8.datetime.jpa.YearMonthLongConverter</class>
+    …
 </persistence-unit>
 ```
 
