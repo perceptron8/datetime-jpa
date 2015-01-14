@@ -20,6 +20,11 @@ public class YearMonthConverterTest {
 	private AttributeConverter<YearMonth, Date> converter = new YearMonthConverter();
 
 	@Test
+	public void leap() {
+		assertThat(Year.isLeap(TEST_YEAR), is(true));
+	}
+
+	@Test
 	public void backAndForth() {
 		for (Month month : Month.values()) {
 			YearMonth yearMonth = YearMonth.of(TEST_YEAR, month);
