@@ -41,11 +41,21 @@ Usage
 @Entity
 public class SampleEntity {
     …
+    private DayOfWeek dayOfWeek;
     private LocalDate localDate;
     private LocalTime localTime;
     private LocalDateTime localDateTime;
+    private Month month;
+    private Year year;
+    …
+    @Convert(converter = MonthDayConverter.class)
+    private MonthDay monthDay;
+    @Convert(converter = MonthDayLongConverter.class)
+    private MonthDay monthDayLong;
+    @Convert(converter = YearMonthConverter.class)
+    private YearMonth yearMonth;
+    @Convert(converter = YearMonthLongConverter.class)
+    private YearMonth yearMonthLong;
     …
 }
 ```
-
-Most of the converters have set `Converter#autoApply()` to `true` to they're automatically applied to all entities in the same persistence unit.
