@@ -14,7 +14,9 @@ Following conversions are supported.
 | Month          | INTEGER    |
 | Year           | INTEGER    |
 
-Credits:
+
+Credits
+-------
 * [montanajava/jpaattributeconverters](https://bitbucket.org/montanajava/jpaattributeconverters) 
 * [marschall/threeten-jpa](https://github.com/marschall/threeten-jpa)
 
