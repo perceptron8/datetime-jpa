@@ -12,7 +12,11 @@ Following conversions are supported.
 | LocalDateTime  | TIMESTAMP  |
 | LocalTime      | TIME       |
 | Month          | INTEGER    |
+| MonthDay       | DATE       |
+| MonthDay       | LONG       |
 | Year           | INTEGER    |
+| YearMonth      | DATE       |
+| YearMonth      | LONG       |
 
 
 Credits
@@ -44,4 +48,4 @@ public class SampleEntity {
 }
 ```
 
-All the converters have set `Converter#autoApply()` to `true` to they're automatically applied to all entities in the same persistence unit.
+Most of the converters have set `Converter#autoApply()` to `true` to they're automatically applied to all entities in the same persistence unit.
