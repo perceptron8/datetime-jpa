@@ -1,4 +1,4 @@
-package com.github.perceptron8.datetime.jpa;
+package perceptron8.datetime.jpa;
 
 import java.sql.Date;
 import java.time.LocalDate;
