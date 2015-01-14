@@ -9,11 +9,11 @@ import javax.persistence.AttributeConverter;
  * Converts {@link MonthDay} to {@link Date} and back again.
  */
 public class MonthDayConverter implements AttributeConverter<MonthDay, Date> {
-	public static final int DEAFULT_YEAR = 1972;
+	public static final int DEFAULT_YEAR = 1972;
 	
 	@Override
 	public Date convertToDatabaseColumn(MonthDay attribute) {
-		return attribute == null ? null : Date.valueOf(attribute.atYear(DEAFULT_YEAR));
+		return attribute == null ? null : Date.valueOf(attribute.atYear(DEFAULT_YEAR));
 	}
 
 	@Override

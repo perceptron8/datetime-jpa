@@ -15,7 +15,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 public class YearMonthLongConverterTest {
-	public static final int TEST_YEAR = MonthDayConverter.DEAFULT_YEAR;
+	public static final int TEST_YEAR = MonthDayConverter.DEFAULT_YEAR;
 	private AttributeConverter<YearMonth, Long> converter = new YearMonthLongConverter();
 	
 	@Test
