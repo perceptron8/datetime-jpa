@@ -1,7 +1,7 @@
 datetime-jpa
 ============
 
-JPA 2.1 attribute converters for JSR-310 (Java 8) dates and times. See [JPA_SPEC-63](https://java.net/jira/browse/JPA_SPEC-63) (currently unresolved).
+JPA 2.1 attribute converters for JSR-310 (Java 8) dates and times. See [JPA_SPEC-63](https://java.net/jira/browse/JPA_SPEC-63).
 
 Following conversions are supported.
 
@@ -14,7 +14,10 @@ Following conversions are supported.
 | Month          | INTEGER    |
 | Year           | INTEGER    |
 
-Credits go mostly to [montanajava/jpaattributeconverters](https://bitbucket.org/montanajava/jpaattributeconverters).
+Credits:
+* [montanajava/jpaattributeconverters](https://bitbucket.org/montanajava/jpaattributeconverters) 
+* [marschall/threeten-jpa](https://github.com/marschall/threeten-jpa)
+
 
 Usage
 -----
@@ -31,16 +34,9 @@ Usage
 ```java
 @Entity
 public class SampleEntity {
-
-  @Column
   private LocalDate localDate;
-
-  @Column
   private LocalTime localTime;
-
-  @Column
   private LocalDateTime localDateTime;
-  
 }
 ```
 
