@@ -7,7 +7,7 @@ import java.time.YearMonth;
 import javax.persistence.AttributeConverter;
 
 /**
- * Converts {@link YearMonth} to {@link Date} and back again
+ * Converts {@link YearMonth} to {@link Date} and back again.
  * Throws {@link DateTimeException} if the former is not possible.
  */
 public class YearMonthConverter implements AttributeConverter<YearMonth, Date> {
