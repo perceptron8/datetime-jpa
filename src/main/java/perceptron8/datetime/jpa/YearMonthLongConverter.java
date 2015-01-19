@@ -5,7 +5,7 @@ import java.time.YearMonth;
 import javax.persistence.AttributeConverter;
 
 /**
- * Converts {@link YearMonth} to {@link Long} and back again
+ * Converts {@link YearMonth} to {@link Long} and back again.
  */
 public class YearMonthLongConverter implements AttributeConverter<YearMonth, Long> {
 	@Override
