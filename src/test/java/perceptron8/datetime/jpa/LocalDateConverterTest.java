@@ -30,13 +30,13 @@ public class LocalDateConverterTest {
 		assertEquals(entityAttribute, converter.convertToEntityAttribute(databaseColumn));
 	}
 
-	@Ignore("JI-9018213")
+	@Ignore("JDK-8068957")
 	@Test(expected = IllegalArgumentException.class)
 	public void tooTinyToRepresent() {
 		converter.convertToDatabaseColumn(LocalDate.MIN);
 	}
 
-	@Ignore("JI-9018213")
+	@Ignore("JDK-8068957")
 	@Test(expected = IllegalArgumentException.class)
 	public void tooLargeToRepresent() {
 		converter.convertToDatabaseColumn(LocalDate.MAX);

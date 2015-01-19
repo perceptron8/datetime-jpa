@@ -30,13 +30,13 @@ public class LocalDateTimeConverterTest {
 		assertEquals(entityAttribute, converter.convertToEntityAttribute(databaseColumn));
 	}
 	
-	@Ignore("JI-9018210")
+	@Ignore("JDK-8068959")
 	@Test(expected = IllegalArgumentException.class)
 	public void tooTinyToRepresent() {
 		converter.convertToDatabaseColumn(LocalDateTime.MIN);
 	}
 	
-	@Ignore("JI-9018210")
+	@Ignore("JDK-8068959")
 	@Test(expected = IllegalArgumentException.class)
 	public void tooLargeToRepresent() {
 		converter.convertToDatabaseColumn(LocalDateTime.MIN);

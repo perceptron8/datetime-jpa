@@ -39,13 +39,13 @@ public class YearMonthConverterTest {
 		assertThat(converter.convertToEntityAttribute(null), is(nullValue()));
 	}
 	
-	@Ignore("JI-9018213")
+	@Ignore("JDK-8068957")
 	@Test(expected = IllegalArgumentException.class)
 	public void tooTinyToRepresent() {
 		converter.convertToDatabaseColumn(YearMonth.of(Year.MIN_VALUE, Month.JANUARY));
 	}
 
-	@Ignore("JI-9018213")
+	@Ignore("JDK-8068957")
 	@Test(expected = IllegalArgumentException.class)
 	public void tooLargeToRepresent() {
 		converter.convertToDatabaseColumn(YearMonth.of(Year.MAX_VALUE, Month.JANUARY));
