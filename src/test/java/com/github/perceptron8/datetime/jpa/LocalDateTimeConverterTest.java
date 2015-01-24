@@ -1,4 +1,4 @@
-package perceptron8.datetime.jpa;
+package com.github.perceptron8.datetime.jpa;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,7 +10,7 @@ import javax.persistence.AttributeConverter;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import perceptron8.datetime.jpa.LocalDateTimeConverter;
+import com.github.perceptron8.datetime.jpa.LocalDateTimeConverter;
 
 public class LocalDateTimeConverterTest {
 	private AttributeConverter<LocalDateTime, Timestamp> converter = new LocalDateTimeConverter();

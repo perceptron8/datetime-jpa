@@ -1,10 +1,11 @@
-package perceptron8.datetime.jpa;
+package com.github.perceptron8.datetime.jpa;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.sql.Date;
 import java.time.Month;
 import java.time.MonthDay;
 
@@ -12,15 +13,17 @@ import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
 
-public class MonthDayLongConverterTest {
-	private AttributeConverter<MonthDay, Long> converter = new MonthDayLongConverter();
+import com.github.perceptron8.datetime.jpa.MonthDayConverter;
+
+public class MonthDayConverterTest {
+	private AttributeConverter<MonthDay, Date> converter = new MonthDayConverter();
 
 	@Test
 	public void backAndForth() {
 		for (Month month : Month.values()) {
 			for (int dayOfMonth = 1; dayOfMonth <= month.length(true); dayOfMonth++) {
 				MonthDay monthDay = MonthDay.of(month, dayOfMonth);
-				Long databaseColumn = converter.convertToDatabaseColumn(monthDay);
+				Date databaseColumn = converter.convertToDatabaseColumn(monthDay);
 				assertThat(converter.convertToEntityAttribute(databaseColumn), is(equalTo(monthDay)));
 			}
 		}

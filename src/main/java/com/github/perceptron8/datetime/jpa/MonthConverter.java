@@ -1,4 +1,4 @@
-package perceptron8.datetime.jpa;
+package com.github.perceptron8.datetime.jpa;
 
 import java.time.DateTimeException;
 import java.time.Month;

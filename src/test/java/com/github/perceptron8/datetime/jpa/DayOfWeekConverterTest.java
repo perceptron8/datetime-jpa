@@ -1,4 +1,4 @@
-package perceptron8.datetime.jpa;
+package com.github.perceptron8.datetime.jpa;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -11,6 +11,8 @@ import java.time.DayOfWeek;
 import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
+
+import com.github.perceptron8.datetime.jpa.DayOfWeekConverter;
 
 public class DayOfWeekConverterTest {
 	private AttributeConverter<DayOfWeek, Integer> converter = new DayOfWeekConverter();

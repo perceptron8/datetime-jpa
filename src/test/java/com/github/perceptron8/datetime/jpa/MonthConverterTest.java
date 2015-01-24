@@ -1,4 +1,4 @@
-package perceptron8.datetime.jpa;
+package com.github.perceptron8.datetime.jpa;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -12,7 +12,7 @@ import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
 
-import perceptron8.datetime.jpa.MonthConverter;
+import com.github.perceptron8.datetime.jpa.MonthConverter;
 
 public class MonthConverterTest {
 	private AttributeConverter<Month, Integer> converter = new MonthConverter();
