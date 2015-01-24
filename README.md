@@ -6,19 +6,18 @@ Following conversions are supported:
 
 
 
-| Java SE 8      | ANSI SQL        |
-| -------------- | --------------- |
-| DayOfWeek      | INTEGER¹        |
-| LocalDate      | DATE¹           |
-| LocalDateTime  | TIMESTAMP¹      |
-| LocalTime      | TIME¹           |
-| Month          | INTEGER¹        |
-| MonthDay       | DATE¹, LONG²    |
-| Year           | DATE², INTEGER¹ |
-| YearMonth      | DATE¹, LONG²    |
+| Java SE 8      | ANSI SQL       |
+| -------------- | -------------- |
+| DayOfWeek      | INTEGER        |
+| LocalDate      | DATE           |
+| LocalDateTime  | TIMESTAMP      |
+| LocalTime      | TIME           |
+| Month          | INTEGER        |
+| MonthDay       | DATE, LONG¹    |
+| Year           | DATE¹, INTEGER |
+| YearMonth      | DATE, LONG¹    |
 
-¹ - `Converter#autoApply()` set to `true`,<br>
-² - `Converter#autoApply()` set to `false`.
+¹ - Requires explicit `@Convert` annotation. All other converters are auto applied.
 
 
 Credits
