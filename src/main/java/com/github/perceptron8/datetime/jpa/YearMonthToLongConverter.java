@@ -3,11 +3,13 @@ package com.github.perceptron8.datetime.jpa;
 import java.time.YearMonth;
 
 import javax.persistence.AttributeConverter;
+import javax.persistence.Converter;
 
 /**
  * Converts {@link YearMonth} to {@link Long} and back again.
  */
-public class YearMonthLongConverter implements AttributeConverter<YearMonth, Long> {
+@Converter(autoApply = false)
+public class YearMonthToLongConverter implements AttributeConverter<YearMonth, Long> {
 	@Override
 	public Long convertToDatabaseColumn(YearMonth attribute) {
 		return attribute == null ? null : (long) attribute.getYear() << 32 | (long) attribute.getMonthValue() << 0;

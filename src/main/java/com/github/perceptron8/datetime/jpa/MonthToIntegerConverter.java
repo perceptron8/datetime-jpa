@@ -11,7 +11,7 @@ import javax.persistence.Converter;
  * Throws {@link DateTimeException} if the latter is not possible.
  */
 @Converter(autoApply = true)
-public class MonthConverter implements AttributeConverter<Month, Integer> {
+public class MonthToIntegerConverter implements AttributeConverter<Month, Integer> {
 	@Override
 	public Integer convertToDatabaseColumn(Month attribute) {
 		return attribute == null ? null : attribute.getValue();

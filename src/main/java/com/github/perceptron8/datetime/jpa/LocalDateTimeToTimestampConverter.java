@@ -11,7 +11,7 @@ import javax.persistence.Converter;
  * Throws {@link IllegalArgumentException} if the former is not possible.
  */
 @Converter(autoApply = true)
-public class LocalDateTimeConverter implements AttributeConverter<LocalDateTime, Timestamp> {
+public class LocalDateTimeToTimestampConverter implements AttributeConverter<LocalDateTime, Timestamp> {
 	@Override
 	public Timestamp convertToDatabaseColumn(LocalDateTime attribute) {
 		return attribute == null ? null : Timestamp.valueOf(attribute);

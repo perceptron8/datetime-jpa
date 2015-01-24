@@ -5,12 +5,14 @@ import java.time.DateTimeException;
 import java.time.YearMonth;
 
 import javax.persistence.AttributeConverter;
+import javax.persistence.Converter;
 
 /**
  * Converts {@link YearMonth} to {@link Date} and back again.
  * Throws {@link DateTimeException} if the former is not possible.
  */
-public class YearMonthConverter implements AttributeConverter<YearMonth, Date> {
+@Converter(autoApply = true)
+public class YearMonthToDateConverter implements AttributeConverter<YearMonth, Date> {
 	@Override
 	public Date convertToDatabaseColumn(YearMonth attribute) {
 		return attribute == null ? null : Date.valueOf(attribute.atDay(1));

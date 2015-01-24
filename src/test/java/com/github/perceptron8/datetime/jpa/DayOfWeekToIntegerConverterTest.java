@@ -12,10 +12,10 @@ import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
 
-import com.github.perceptron8.datetime.jpa.DayOfWeekConverter;
+import com.github.perceptron8.datetime.jpa.DayOfWeekToIntegerConverter;
 
-public class DayOfWeekConverterTest {
-	private AttributeConverter<DayOfWeek, Integer> converter = new DayOfWeekConverter();
+public class DayOfWeekToIntegerConverterTest {
+	private AttributeConverter<DayOfWeek, Integer> converter = new DayOfWeekToIntegerConverter();
 
 	@Test
 	public void convertToDatabaseColumn() {

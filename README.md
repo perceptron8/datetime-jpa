@@ -4,18 +4,16 @@ JPA 2.1 attribute converters for JSR-310 temporal types (java.time.*).
 
 Following conversions are supported:
 
-| Java SE 8      | ANSI SQL   |
-| -------------- | ---------- |
-| DayOfWeek      | INTEGER    |
-| LocalDate      | DATE       |
-| LocalDateTime  | TIMESTAMP  |
-| LocalTime      | TIME       |
-| Month          | INTEGER    |
-| MonthDay       | DATE       |
-| MonthDay       | LONG       |
-| Year           | INTEGER    |
-| YearMonth      | DATE       |
-| YearMonth      | LONG       |
+| Java SE 8      | ANSI SQL      |
+| -------------- | ------------- |
+| DayOfWeek      | INTEGER       |
+| LocalDate      | DATE          |
+| LocalDateTime  | TIMESTAMP     |
+| LocalTime      | TIME          |
+| Month          | INTEGER       |
+| MonthDay       | DATE, LONG    |
+| Year           | DATE, INTEGER |
+| YearMonth      | DATE, LONG    |
 
 
 Credits

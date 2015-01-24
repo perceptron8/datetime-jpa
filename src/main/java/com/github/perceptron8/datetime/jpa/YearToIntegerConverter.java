@@ -9,7 +9,7 @@ import javax.persistence.Converter;
  * Converts {@link Year} to {@link Integer} and back again.
  */
 @Converter(autoApply = true)
-public class YearConverter implements AttributeConverter<Year, Integer> {
+public class YearToIntegerConverter implements AttributeConverter<Year, Integer> {
 	@Override
 	public Integer convertToDatabaseColumn(Year attribute) {
 		return attribute == null ? null : attribute.getValue();

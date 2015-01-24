@@ -10,10 +10,10 @@ import javax.persistence.AttributeConverter;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.github.perceptron8.datetime.jpa.LocalDateConverter;
+import com.github.perceptron8.datetime.jpa.LocalDateToDateConverter;
 
-public class LocalDateConverterTest {
-	private AttributeConverter<LocalDate, Date> converter = new LocalDateConverter();
+public class LocalDateToDateConverterTest {
+	private AttributeConverter<LocalDate, Date> converter = new LocalDateToDateConverter();
 
 	private LocalDate entityAttribute = LocalDate.of(2000, 12, 31);
 	private Date databaseColumn = Date.valueOf(entityAttribute);

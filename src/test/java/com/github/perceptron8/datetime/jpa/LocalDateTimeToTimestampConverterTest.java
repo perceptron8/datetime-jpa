@@ -10,10 +10,10 @@ import javax.persistence.AttributeConverter;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.github.perceptron8.datetime.jpa.LocalDateTimeConverter;
+import com.github.perceptron8.datetime.jpa.LocalDateTimeToTimestampConverter;
 
-public class LocalDateTimeConverterTest {
-	private AttributeConverter<LocalDateTime, Timestamp> converter = new LocalDateTimeConverter();
+public class LocalDateTimeToTimestampConverterTest {
+	private AttributeConverter<LocalDateTime, Timestamp> converter = new LocalDateTimeToTimestampConverter();
 	
 	private LocalDateTime entityAttribute = LocalDateTime.of(2000, 12, 31, 23, 59, 59);
 	private Timestamp databaseColumn = Timestamp.valueOf(entityAttribute);

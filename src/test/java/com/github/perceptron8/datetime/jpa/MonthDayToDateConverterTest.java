@@ -13,10 +13,10 @@ import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
 
-import com.github.perceptron8.datetime.jpa.MonthDayConverter;
+import com.github.perceptron8.datetime.jpa.MonthDayToDateConverter;
 
-public class MonthDayConverterTest {
-	private AttributeConverter<MonthDay, Date> converter = new MonthDayConverter();
+public class MonthDayToDateConverterTest {
+	private AttributeConverter<MonthDay, Date> converter = new MonthDayToDateConverter();
 
 	@Test
 	public void backAndForth() {

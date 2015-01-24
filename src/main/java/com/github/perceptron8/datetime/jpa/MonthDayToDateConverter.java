@@ -4,16 +4,18 @@ import java.sql.Date;
 import java.time.MonthDay;
 
 import javax.persistence.AttributeConverter;
+import javax.persistence.Converter;
 
 /**
  * Converts {@link MonthDay} to {@link Date} and back again.
  */
-public class MonthDayConverter implements AttributeConverter<MonthDay, Date> {
-	public static final int DEFAULT_YEAR = 1972;
-	
+@Converter(autoApply = true)
+public class MonthDayToDateConverter implements AttributeConverter<MonthDay, Date> {
+	public static final int Y2K = 2000;
+
 	@Override
 	public Date convertToDatabaseColumn(MonthDay attribute) {
-		return attribute == null ? null : Date.valueOf(attribute.atYear(DEFAULT_YEAR));
+		return attribute == null ? null : Date.valueOf(attribute.atYear(Y2K));
 	}
 
 	@Override

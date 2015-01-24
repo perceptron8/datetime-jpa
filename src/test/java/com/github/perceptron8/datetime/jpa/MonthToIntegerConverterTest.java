@@ -12,10 +12,10 @@ import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
 
-import com.github.perceptron8.datetime.jpa.MonthConverter;
+import com.github.perceptron8.datetime.jpa.MonthToIntegerConverter;
 
-public class MonthConverterTest {
-	private AttributeConverter<Month, Integer> converter = new MonthConverter();
+public class MonthToIntegerConverterTest {
+	private AttributeConverter<Month, Integer> converter = new MonthToIntegerConverter();
 
 	@Test
 	public void convertToDatabaseColumn() {

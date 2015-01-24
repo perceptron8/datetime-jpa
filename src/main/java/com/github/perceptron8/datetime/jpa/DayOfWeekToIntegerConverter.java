@@ -11,7 +11,7 @@ import javax.persistence.Converter;
  * Throws {@link DateTimeException} if the latter is not possible.
  */
 @Converter(autoApply = true)
-public class DayOfWeekConverter implements AttributeConverter<DayOfWeek, Integer> {
+public class DayOfWeekToIntegerConverter implements AttributeConverter<DayOfWeek, Integer> {
 	@Override
 	public Integer convertToDatabaseColumn(DayOfWeek attribute) {
 		return attribute == null ? null : attribute.getValue();

@@ -9,10 +9,10 @@ import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
 
-import com.github.perceptron8.datetime.jpa.LocalTimeConverter;
+import com.github.perceptron8.datetime.jpa.LocalTimeToTimeConverter;
 
-public class LocalTimeConverterTest {
-	private AttributeConverter<LocalTime, Time> converter = new LocalTimeConverter();
+public class LocalTimeToTimeConverterTest {
+	private AttributeConverter<LocalTime, Time> converter = new LocalTimeToTimeConverter();
 
 	private LocalTime entityAttribute = LocalTime.of(23, 59, 59);
 	private Time databaseColumn = Time.valueOf(entityAttribute);
