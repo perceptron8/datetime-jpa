@@ -17,7 +17,7 @@ Following conversions are supported:
 | Year           | DATE¹, INTEGER |
 | YearMonth      | DATE, LONG¹    |
 
-¹ - Requires explicit `@Convert` annotation. All other converters are auto applied.
+¹ - use `@Convert` to choose this one
 
 
 Credits
