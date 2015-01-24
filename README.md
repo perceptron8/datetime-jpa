@@ -17,7 +17,7 @@ Following conversions are supported:
 | Year           | DATE¹, INTEGER |
 | YearMonth      | DATE, LONG¹    |
 
-¹ - use `@Convert` to choose this one
+¹ - use `@Convert` to choose this one, it's not auto applied
 
 
 Credits
@@ -32,18 +32,19 @@ Usage
 ```xml
 <persistence-unit>
     …
-    <class>perceptron8.datetime.jpa.LocalTimeConverter</class>
-    <class>perceptron8.datetime.jpa.LocalDateConverter</class>
-    <class>perceptron8.datetime.jpa.LocalDateTimeConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.LocalTimeToTimeConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.LocalDateToDateConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.LocalDateTimeToTimestampConverter</class>
     …
-    <class>perceptron8.datetime.jpa.DayOfWeekConverter</class>
-    <class>perceptron8.datetime.jpa.MonthConverter</class>
-    <class>perceptron8.datetime.jpa.YearConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.DayOfWeekToIntegerConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.MonthToIntegerConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.YearToDateConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.YearToIntegerConverter</class>
     …
-    <class>perceptron8.datetime.jpa.MonthDayConverter</class>
-    <class>perceptron8.datetime.jpa.MonthDayLongConverter</class>
-    <class>perceptron8.datetime.jpa.YearMonthConverter</class>
-    <class>perceptron8.datetime.jpa.YearMonthLongConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.MonthDayToDateConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.MonthDayToLongConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.YearMonthToDateConverter</class>
+    <class>com.github.perceptron8.datetime.jpa.YearMonthToLongConverter</class>
     …
 </persistence-unit>
 ```
@@ -60,14 +61,8 @@ public class SampleEntity {
     private Month month;
     private Year year;
     …
-    @Convert(converter = MonthDayConverter.class)
     private MonthDay monthDay;
-    @Convert(converter = MonthDayLongConverter.class)
-    private MonthDay monthDayLong;
-    @Convert(converter = YearMonthConverter.class)
     private YearMonth yearMonth;
-    @Convert(converter = YearMonthLongConverter.class)
-    private YearMonth yearMonthLong;
     …
 }
 ```
