@@ -32,7 +32,7 @@ public class MonthToIntegerConverterTest {
 			assertThat(converter.convertToEntityAttribute(month.getValue()), is(equalTo(month)));
 		}
 	}
-	
+
 	@Test(expected = DateTimeException.class)
 	public void dateTimeException() {
 		converter.convertToEntityAttribute(0);

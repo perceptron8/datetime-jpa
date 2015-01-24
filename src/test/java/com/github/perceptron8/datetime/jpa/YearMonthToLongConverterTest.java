@@ -15,10 +15,10 @@ import org.junit.Test;
 
 public class YearMonthToLongConverterTest {
 	private AttributeConverter<YearMonth, Long> converter = new YearMonthToLongConverter();
-	
+
 	private int[] years = { Year.MIN_VALUE, -1, 0, 1, Year.MAX_VALUE };
 	private Month[] months = Month.values();
-	
+
 	@Test
 	public void backAndForth() {
 		for (int year : years) {

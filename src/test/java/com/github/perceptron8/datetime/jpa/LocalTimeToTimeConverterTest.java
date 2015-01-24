@@ -16,7 +16,7 @@ public class LocalTimeToTimeConverterTest {
 
 	private LocalTime entityAttribute = LocalTime.of(23, 59, 59);
 	private Time databaseColumn = Time.valueOf(entityAttribute);
-	
+
 	@Test
 	public void convertToDatabaseColumn() {
 		assertEquals(null, converter.convertToDatabaseColumn(null));

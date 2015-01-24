@@ -29,7 +29,7 @@ public class YearToDateConverterTest {
 		assertThat(converter.convertToEntityAttribute(Date.valueOf(Year.of(1).atDay(1))), is(equalTo(Year.of(1))));
 		assertThat(converter.convertToEntityAttribute(Date.valueOf(Year.of(9999).atDay(1))), is(equalTo(Year.of(9999))));
 	}
-	
+
 	@Ignore("JDK-8068957")
 	@Test(expected = IllegalArgumentException.class)
 	public void tooTinyToRepresent() {
