@@ -26,9 +26,9 @@
 	<url>https://github.com/perceptron8/datetime-jpa</url>
 
 	<scm>
-		<url>https://github.com/perceptron8/datetime-jpa</url>
+		<url>scm:git:https://github.com/perceptron8/datetime-jpa</url>
 	</scm>
-	
+
 	<prerequisites>
 		<maven>3.0</maven>
 	</prerequisites>
@@ -83,6 +83,10 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.9.2</version>
 			</plugin>
 		</plugins>
 	</build>
