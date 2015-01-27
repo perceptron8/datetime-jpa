@@ -9,6 +9,11 @@ import javax.persistence.Converter;
 /**
  * Converts {@link LocalDate} to {@link Date} and back again.
  * Throws {@link IllegalArgumentException} if the former is not possible.
+ * <p>
+ * <strong>Important note:</strong> Only values between {@code 0001-01-01} and
+ * {@code 9999-12-31} are currently supported (at least until
+ * <a href="https://bugs.openjdk.java.net/browse/JDK-8068957">JDK-8068957</a> is resolved).
+ * </p>
  */
 @Converter(autoApply = true)
 public class LocalDateToDateConverter implements AttributeConverter<LocalDate, Date> {

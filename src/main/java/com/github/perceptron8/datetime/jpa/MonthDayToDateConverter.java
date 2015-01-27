@@ -8,6 +8,9 @@ import javax.persistence.Converter;
 
 /**
  * Converts {@link MonthDay} to {@link Date} and back again.
+ * <p>
+ * Note: Year 2000 is used as default year.
+ * </p>
  */
 @Converter(autoApply = true)
 public class MonthDayToDateConverter implements AttributeConverter<MonthDay, Date> {
