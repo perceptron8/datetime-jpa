@@ -5,14 +5,13 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.time.DateTimeException;
 import java.time.Month;
 import java.time.MonthDay;
 
 import javax.persistence.AttributeConverter;
 
 import org.junit.Test;
-
-import com.github.perceptron8.datetime.jpa.MonthDayToLongConverter;
 
 public class MonthDayToLongConverterTest {
 	private AttributeConverter<MonthDay, Long> converter = new MonthDayToLongConverter();
@@ -32,5 +31,10 @@ public class MonthDayToLongConverterTest {
 	public void nulls() {
 		assertThat(converter.convertToDatabaseColumn(null), is(nullValue()));
 		assertThat(converter.convertToEntityAttribute(null), is(nullValue()));
+	}
+	
+	@Test(expected = DateTimeException.class)
+	public void dateTimeException() {
+		converter.convertToEntityAttribute(-1L);
 	}
 }

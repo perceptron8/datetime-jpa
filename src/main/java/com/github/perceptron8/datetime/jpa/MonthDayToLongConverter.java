@@ -1,5 +1,6 @@
 package com.github.perceptron8.datetime.jpa;
 
+import java.time.DateTimeException;
 import java.time.MonthDay;
 
 import javax.persistence.AttributeConverter;
@@ -7,6 +8,7 @@ import javax.persistence.Converter;
 
 /**
  * Converts {@link MonthDay} to {@link Long} and back again.
+ * Throws {@link DateTimeException} if the latter is not possible.
  */
 @Converter(autoApply = false)
 public class MonthDayToLongConverter implements AttributeConverter<MonthDay, Long> {
