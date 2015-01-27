@@ -23,6 +23,8 @@
 		</license>
 	</licenses>
 
+	<url>https://github.com/perceptron8/datetime-jpa</url>
+
 	<scm>
 		<url>https://github.com/perceptron8/datetime-jpa</url>
 	</scm>
