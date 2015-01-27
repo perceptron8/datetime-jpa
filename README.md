@@ -29,6 +29,15 @@ Credits
 
 Usage
 -----
+
+```xml
+<dependency>
+    <groupId>com.github.perceptron8</groupId>
+    <artifactId>datetime-jpa</artifactId>
+    <version>0.1.0</version>
+</dependency>
+```
+
 ```xml
 <persistence-unit>
     …
