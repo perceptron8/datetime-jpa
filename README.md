@@ -1,4 +1,4 @@
-datetime-jpa
+datetime-jpa [![Build Status](https://travis-ci.org/perceptron8/datetime-jpa.svg?branch=master)](https://travis-ci.org/perceptron8/datetime-jpa) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.perceptron8/datetime-jpa/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.perceptron8/datetime-jpa)
 ============
 JPA 2.1 attribute converters for JSR-310 temporal types (java.time.*).
 
