@@ -24,7 +24,7 @@ Credits
 -------
 * [montanajava/jpaattributeconverters](https://bitbucket.org/montanajava/jpaattributeconverters) 
 * [marschall/threeten-jpa](https://github.com/marschall/threeten-jpa)
-* [JPA_SPEC-63](https://java.net/jira/browse/JPA_SPEC-63)
+* [javaee/jpa-spec#63](https://github.com/javaee/jpa-spec/issues/63)
 
 
 Usage
