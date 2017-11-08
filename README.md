@@ -1,30 +1,30 @@
 datetime-jpa [![Build Status](https://travis-ci.org/perceptron8/datetime-jpa.svg?branch=master)](https://travis-ci.org/perceptron8/datetime-jpa) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.perceptron8/datetime-jpa/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.perceptron8/datetime-jpa)
 ============
-JPA 2.1 attribute converters for JSR-310 temporal types (java.time.*).
+JPA 2.1¹ attribute converters for JSR-310 temporal types (java.time.*).
+
 
 Following conversions are supported:
-
-
 
 | Java SE 8      | ANSI SQL       |
 | -------------- | -------------- |
 | DayOfWeek      | INTEGER        |
-| LocalDate      | DATE           |
-| LocalDateTime  | TIMESTAMP      |
-| LocalTime      | TIME           |
+| LocalDate¹     | DATE           |
+| LocalDateTime¹ | TIMESTAMP      |
+| LocalTime¹     | TIME           |
 | Month          | INTEGER        |
-| MonthDay       | DATE, LONG¹    |
-| Year           | DATE¹, INTEGER |
-| YearMonth      | DATE, LONG¹    |
+| MonthDay       | DATE, LONG²    |
+| Year           | DATE², INTEGER |
+| YearMonth      | DATE, LONG²    |
 
-¹ - use `@Convert` to choose this one
+¹ - supported natively as of JPA 2.2<br/>
+² - use `@Convert` to choose this one
 
 
 Credits
 -------
+* [javaee/jpa-spec#63](https://github.com/javaee/jpa-spec/issues/63)
 * [montanajava/jpaattributeconverters](https://bitbucket.org/montanajava/jpaattributeconverters) 
 * [marschall/threeten-jpa](https://github.com/marschall/threeten-jpa)
-* [javaee/jpa-spec#63](https://github.com/javaee/jpa-spec/issues/63)
 
 
 Usage
